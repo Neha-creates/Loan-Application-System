@@ -1,0 +1,59 @@
+
+        #head{
+            text-align: center;
+            line-height: 0%;
+        }
+        #head>p{
+            font-size: small;
+        }
+        #head>h1{
+            color: darkgreen;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #headBtn{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        #headBtn>a{
+            color: black;
+        }
+        #headBtn>a:hover{
+            color: darkgreen;
+        }
+        #login{
+            background-color: white;
+            padding: 5px 20px;
+            border: 2px solid;
+            border-radius: 10%;
+        }
+        #login:hover{
+            color: darkgreen;
+            border: 3px solid darkgreen;
+            border-radius: 5%;
+        }
+        nav{
+            background-color: rgb(159, 247, 198);
+            background: linear-gradient(rgb(128, 241, 172), white);
+            display: flex;
+            justify-content: space-around;
+            padding-top: 20px;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #logo{
+            height: 60px;
+            width: 100px;
+        }
+        .hero{
+            background-image: url('dull_background.jpg');
+            background-size: 100%;
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 190px;
+            color: rgb(255, 255, 255);
+        }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Apply for loan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .form-wrapper {
+            display: flex;
+            width: 300%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .form {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .formBtns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--<header>
+    <section class="form-phases">
+        <div>
+            <button class="navBtn" id='personalInfo' onclick="show_form1()">Personal Info</button>
+            <button class="navBtn" id="financialDetails" onclick="show_form2()">Financial Details</button>
+            <button class="navBtn">Document Upload</button>
+        </div>
+    </section>
+    </header>
+    <hr>-->
+    <div class="container">
+        <div class="form-wrapper" id="formWrapper">
+            <div class="form" id="form1">
+                <h2 style="color: darkgreen;">Personal Information</h2>
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" required><br>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" required><br>
+                    <label for="phone">Phone:</label><br>
+                    <input type="text" required><br>
+                    <label for="date">DOB:</label><br>
+                    <input type="date" required><br>
+                    <div class="formBtns">
+                        <button type="button" onclick="nextForm(1)">Next</button>
+                    </div>
+                </form>
+            </div>
+            <div class="form" id="form2">
+                <h2 style="color: darkgreen;">Financial Details</h2>
+                <form>
+                    <label>Loan Amount:</label><br>
+                    <input type="number" required><br>
+                    <label >Purpose:</label><br>
+                    <input type="text"  required><br>
+                    <label>Preferred Tenure:</label><br>
+                    <input type="number" required><br>
+                    <div class="formBtns">
+                        <button id="prev" onclick="prevForm(1)">Prev</button>
+                        <button id="next" onclick="nextForm(2)">Next</button>
+                    </div>
+                </form>
+            </div>
+            <div class="form" id="form3">
+                <h2 style="color: darkgreen;">Document Upload</h2>
+                <form>
+                    <label>Upload Document:</label>
+                    <input type="file" required><br>
+                    <div class="formBtns">
+                        <button type="button" onclick="prevForm(2)">Prev</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let currentForm = 0;
+    function nextForm(index) {
+        currentForm = index;
+        document.getElementById("formWrapper").style.transform = `translateX(-${index * 100}%)`;
+    }
+    function prevForm(index) {
+        currentForm = index;
+        document.getElementById("formWrapper").style.transform = `translateX(-${currentForm * 100}%)`;
+    }
+</script>

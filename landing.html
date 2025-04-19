@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Loan In Hand</title>
+    <style>
+        #head{
+            text-align: center;
+            line-height: 0%;
+        }
+        #head>p{
+            font-size: small;
+        }
+        #head>h1{
+            color: darkgreen;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #headBtn{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        #headBtn>a{
+            color: black;
+        }
+        #headBtn>a:hover{
+            color: darkgreen;
+        }
+        #login{
+            background-color: white;
+            padding: 5px 20px;
+            border: 2px solid;
+            border-radius: 10%;
+        }
+        #login:hover{
+            color: darkgreen;
+            border: 3px solid darkgreen;
+            border-radius: 5%;
+        }
+        nav{
+            background-color: rgb(159, 247, 198);
+            background: linear-gradient(rgb(128, 241, 172), white);
+            display: flex;
+            justify-content: space-around;
+            padding-top: 20px;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        
+        #logo{
+            height: 60px;
+            width: 100px;
+        }
+        .hero{
+            background-image: url('dull_background.jpg');
+            background-size: 100%;
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 190px;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="head">
+            <h1>LOAN IN HAND</h1>
+            <p>Your trusted loan partner</p>
+        </div>
+        <nav>
+            <div>
+                <img src="https://www.loaninhand.com/assets/img/Main.png" alt="logo" id="logo">
+            </div>      
+            <div id="headBtn">
+                <a href="">About Us</a>
+                <a href="">Loan plans</a>
+                <a href="">Help</a>
+                <a href="">BMI calculator</a>
+                <a href="login.html"><button id="login">Login</button></a>
+            </div>
+        </nav>
+    </header>
+    <div class="hero">
+        <h2>Need a Loan? Get Approved Instantly!</h2>
+        <p>Apply now and enjoy fast approval, flexible repayment, and low-interest rates.</p>
+        <a href="form.html"><button>Apply Now</button></a>       
+    </div>
+</body>
+</html>
+<script>
+    async function fetchD(){
+        try {
+            let res = await fetch('https://jsonplaceholder.typicode.com/comments' + "?_limit=5");
+            let data = await res.json();
+            console.log(data);
+            let container = document.getElementById('container');
+            container.innerHTML = '';
+            data.forEach((element) => {
+                    console.log(element.body);
+                    let p = document.createElement('p');
+                    p.innerText = element.body;
+                    container.append(p);
+            });
+        } catch (error) {
+            alert(error);
+        }
+    }
+    //fetchD();
+</script>
